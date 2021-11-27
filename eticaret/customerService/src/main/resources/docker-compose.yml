@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  customer-service-db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=ProductDB
+      - MYSQL_USER=myapp-user
+      - MYSQL_PASSWORD=root
+    ports:
+      -  "3306:3306"
