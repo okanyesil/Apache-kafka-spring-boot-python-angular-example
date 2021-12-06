@@ -1,4 +1,4 @@
 iyzipay
 pandas
 Flask
-faust
+kafka-python
