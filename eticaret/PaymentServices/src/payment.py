@@ -1,12 +1,13 @@
 import iyzipay
+import json
 
 class Payment:
   options: dict()
 
   def __init__(self):
     self.options = {
-      'api_key': 'your api key',
-      'secret_key': 'your secret key',
+      'api_key': 'sandbox-0zxg3gRxbRAHo2SPN0DclHvh3gNQfiV1',
+      'secret_key': 'sandbox-O6O3Ur851iuKvzbq79efVz0nN4sNkvrU',
       'base_url': 'sandbox-api.iyzipay.com'
     }
 
@@ -25,10 +26,13 @@ class Payment:
       'buyer': buyer,
       'shippingAddress': address,
       'billingAddress': address,
-      'basketItems': basket_items
+      'basketItems': basket_items,
+      'callbackUrl': 'https://www.linkedin.com/in/okanyesil/'
     }
 
-    payment = iyzipay.Payment().create(request, self.options)
+    response_content = json.loads(iyzipay.CheckoutFormInitialize().create(request, self.options).read().decode('utf-8'))
+    checkout_form_initialize = response_content.get('checkoutFormContent')
+    return checkout_form_initialize
 
 
 
