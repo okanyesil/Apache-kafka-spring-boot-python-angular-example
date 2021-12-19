@@ -1,4 +1,4 @@
-package com.okan.orderservice.Entity;
+package com.okan.customerservice.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookDTO {
+public class CustomerDTO {
   private Long id;
-  private String bookName;
-  private String author;
-  private float price;
+  private String name;
+  private String lastName;
+  private String email;
 
 }
