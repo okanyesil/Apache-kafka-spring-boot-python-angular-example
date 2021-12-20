@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+
+
+<div class="container mt-5 mb-5">
+  <div class="d-flex justify-content-center row">
+    <div class="col-md-8">
+      <div class="p-2">
+        <h4>Shopping cart</h4>
+      </div>
+      <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded"
+      *ngFor="let book of cart"
+      >
+        <div class="mr-1"><img class="rounded" src="{{book.image}}" width="70"></div>
+        <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">{{book.bookName}}</span>
+          <div class="d-flex flex-row product-desc">
+            <div class="size mr-1"><span class="text-grey">Author:</span><span class="font-weight-bold">{{book.author}}</span></div>
+          </div>
+        </div>
+        <div class="d-flex flex-row align-items-center qty"><i class="fa fa-minus text-danger"></i>
+        </div>
+        <div>
+          <h5 class="text-grey">{{book.price}}</h5>
+        </div>
+      </div>
+      <span>Toplam Ücret: {{toplamUcret}}</span>
+      <div class="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded"><button class="btn btn-warning btn-block btn-lg ml-2 pay-button" type="button" (click)="yonlendir()">Satın Al</button></div>
+    </div>
+  </div>
+</div>

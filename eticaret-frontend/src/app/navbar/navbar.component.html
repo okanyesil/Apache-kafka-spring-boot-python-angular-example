@@ -1,0 +1,13 @@
+<div class="custom-navbar">
+  <div class="logo">
+    <a [routerLink]="'/'">BEST BOOK</a>
+  </div>
+  <div class="space"></div>
+  <div class="user-info">
+    <span class="user-foto">Selam,</span>
+    <span class="mx-3">{{(userInfo | async)?.name}}</span>
+    <span>{{(userInfo | async)?.lastName}}</span>
+    <a [routerLink]="'/shopping-cart'"><fa-icon [icon]="faIcon"></fa-icon></a>
+
+  </div>
+</div>
