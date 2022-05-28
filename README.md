@@ -22,8 +22,7 @@ I have 5 services in my backend this are
  
  ### Payment Service
 
-This service is responsible for connecting to Iyzico server and getting payment. There was a problem with the java package so I used python instead. The service is listening to Apache Kafka topic whose name is ```t_stock``` runs on ```9092``` port. If the payment gets. The service redirects the user ```Success Page``` otherwise ``` throw an error
-``` 
+This service is responsible for connecting to Iyzico server and getting payment. There was a problem with the java package so I used python instead. The service is listening to Apache Kafka topic whose name is ```t_stock``` runs on ```9092``` port. If the payment gets. The service redirects the user ```Success Page``` otherwise ``` throw an error``` 
 
 ![iyzico](https://user-images.githubusercontent.com/20371947/170817714-4c9a9b99-bed9-4147-807d-074204c3881b.jpg)
 
