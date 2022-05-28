@@ -22,8 +22,8 @@ I have 5 services in my backend this are
  
  ### Payment Service
 
-This service responsible for connecting to <b>Iyzico</b> server and get payment. There was a problem with java package so I used python insted. The service listening
-Apache Kafka topic which name is ```t_stock``` running on ```9092``` port. If the payment gets. The service redirect user ``` Success Page``` other wise ``` throw error ```
+This service is responsible for connecting to Iyzico server and getting payment. There was a problem with the java package so I used python instead. The service is listening to Apache Kafka topic whose name is ```t_stock``` runs on ```9092``` port. If the payment gets. The service redirects the user ```Success Page``` otherwise ``` throw an error
+``` 
 
 ![iyzico](https://user-images.githubusercontent.com/20371947/170817714-4c9a9b99-bed9-4147-807d-074204c3881b.jpg)
 
@@ -33,16 +33,16 @@ Apache Kafka topic which name is ```t_stock``` running on ```9092``` port. If th
 
 ### Customer Service
 
-This service responsible for authenticate user, register user
+This service is responsible for authenticating users and registering user
 
 
 ### Order Service
 
-This service responble for listening kafka ``` payment_event ``` topic. If the payment successful this service create ``` Order in OrderDB ```
+This service is responble for listening to Kafka ``` payment_event ``` topic. If the payment is successful this service creates ``` Order in OrderDB ```
 
 ### Product Service
 
-This service responsible comminicate with UI-service. The service return products and filter them.
+This service is responsible comminicate with UI-service. The service returns products and filters them.
 
 
 ### Stock Service
